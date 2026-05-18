@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Chamados</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Sistema de Chamados de Máquinas</h1>
+
+  <!-- Seção do Operador -->
+  <section>
+    <h2>Solicitar Suporte</h2>
+    <form id="formChamado">
+      <label>Máquina:</label>
+      <input type="text" name="maquina" required>
+      <label>Gravidade:</label>
+      <select name="gravidade" required>
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
+      </select>
+      <label>Descrição:</label>
+      <textarea name="descricao" required></textarea>
+      <button type="submit" class="btn-grande">Solicitar Suporte</button>
+    </form>
+  </section>
+
+  <!-- Seção do Painel -->
+  <section>
+    <h2>Painel Central de Chamados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Máquina</th>
+          <th>Gravidade</th>
+          <th>Status</th>
+          <th>Descrição</th>
+          <th>Peças</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="listaChamados"></tbody>
+    </table>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
